@@ -1,0 +1,107 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.cover-container {
+  width: 800px;
+  height: 1040px;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.block {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.blue {
+  background: #0033A0;
+  left: -100%;
+  top: 0;
+  height: 25%; /* adjusted height */
+  animation-name: slideFromLeft;
+}
+
+.yellow {
+  background: #FEDD00;
+  right: -100%;
+  top: 25%;
+  height: 15%; /* adjusted height */
+  animation-name: slideFromRight;
+}
+
+.black {
+  background: #000000;
+  top: 40%; /* adjusted positioning */
+  left: -100%;
+  animation-name: slideFromLeft;
+}
+
+.gray {
+  background: #949494;
+  top: 60%; /* adjusted positioning */
+  right: -100%;
+  animation-name: slideFromRight;
+}
+
+.red {
+  background: #FF0000;
+  top: 80%; /* adjusted positioning */
+  left: -100%;
+  animation-name: slideFromLeft;
+}
+
+@keyframes slideFromLeft {
+  to { left: 0; }
+}
+
+@keyframes slideFromRight {
+  to { right: 0; }
+}
+
+.text-container {
+  position: absolute;
+  width: 100%;
+  top: 25%; /* adjusted top to center text better */
+  transform: translateY(-50%);
+  text-align: center;
+  color: #000;
+  opacity: 0;
+  animation: fadeIn 2s 8s forwards;
+  font-family: 'Roboto Flex', sans-serif;
+  font-weight: 700; /* Start with a bold weight */
+  font-variation-settings: 'wght' 700;
+}
+
+.sub-text {
+  margin-top: 20px; /* additional spacing for sub-text */
+}
+
+h1, p {
+  margin: 4px 0; /* adjusted margin for tighter spacing */
+  font-size: 32px;
+  font-variation-settings: 'wght' 700; /* Maintain bold weight across all texts */
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 16px; /* more space below the main title */
+  font-variation-settings: 'wght' 800; /* Extra bold for the main title */
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
